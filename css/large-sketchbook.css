@@ -1,0 +1,112 @@
+body
+{
+    background-color: #6d7080 ; /* slightly darker purple */
+    color: #f5f5dc;
+    font-family: 'Almendra Display', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav
+{
+    margin-top: 30px;
+    margin-bottom: 100px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-right: 1200px
+}
+
+nav a
+{
+    color: #f5f5dc;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    text-decoration: none;
+}
+
+main h2
+{
+    font-size: 32px;
+    word-spacing: 6px;
+}
+
+.normal
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px; /* space between the images */
+    flex-wrap: wrap; /* allow stacking on small screens */
+    margin: 40px 0;
+}
+
+.normal img
+{
+    width: 1000px;
+    height: auto;
+}
+
+.row-1
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px; /* space between the images */
+    flex-wrap: wrap; /* allow stacking on small screens */
+    margin: 40px 0;
+}
+
+.row-1-image img
+{
+    width: 600px;
+    height: auto;
+}
+
+
+footer
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+input[type="email"]
+{
+    padding: 5px;
+    font-family: 'Almendra Display', cursive;
+    font-size: 16px;
+    background-color: #6d7080 ; /* same as background */
+    border: 1px solid #f5f5dc; /* cream border */
+    color: #f5f5dc; /* text color inside the box */
+    margin-left: 50px;
+    text-align: center;
+}
+
+a
+{
+    color: #f5f5dc; /* cream color */
+    text-decoration: none; /* no underline by default */
+    font-family: 'Almendra Display', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: #fff8dc; /* slightly brighter cream on hover */
+}
+
+
+/* Make the placeholder text cream too */
+input[type="email"]::placeholder
+{
+    color: #f5f5dc;
+    opacity: 1; /* make sure it’s full opacity, not faded */
+}
