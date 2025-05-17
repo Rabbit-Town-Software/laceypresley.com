@@ -1,6 +1,6 @@
 body
 {
-    background-color: #6d7080 ; /* slightly darker purple */
+    background-color: #6d7080;
     color: #f5f5dc;
     font-family: 'Almendra Display', cursive;
     text-align: center;
@@ -8,14 +8,18 @@ body
     padding: 0;
 }
 
+/* NAVIGATION */
 nav
 {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    font-size: 32px;
+    margin: 30px 0 40px;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-right: 1200px
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a
@@ -30,18 +34,22 @@ nav a:hover
     text-decoration: none;
 }
 
+/* HEADER */
 main h2
 {
-    font-size: 32px;
+    font-size: 2rem;
     word-spacing: 6px;
+    margin-bottom: 30px;
 }
 
+/* IMAGE CONTAINER */
 .image-container
 {
     position: relative;
     display: inline-block;
-    margin: 20px;
-    width: 80%;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
     box-sizing: border-box;
 }
 
@@ -50,11 +58,17 @@ main h2
     display: block;
     width: 100%;
     height: auto;
-    margin: 0; /* remove any margin */
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.image-container:hover img
+{
+    opacity: 0.6;
+}
+
+/* OVERLAY */
 .overlay
 {
     position: absolute;
@@ -74,7 +88,7 @@ main h2
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    pointer-events: none; /* optional: lets clicks go through if needed */
+    pointer-events: none;
 }
 
 .image-container:hover .overlay
@@ -82,48 +96,53 @@ main h2
     opacity: 1;
 }
 
-
 .overlay h3
 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 0;
 }
 
 .overlay p
 {
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 8px;
 }
 
-.image-container:hover img
-{
-    opacity: 0.6;
-}
-
-
+/* FOOTER */
 footer
 {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 16px;
+    margin: 80px 0 30px;
+    font-size: 1rem;
+    padding: 0 1rem;
 }
 
+/* EMAIL INPUT */
 input[type="email"]
 {
-    padding: 5px;
+    padding: 10px;
     font-family: 'Almendra Display', cursive;
-    font-size: 16px;
-    background-color: #6d7080 ; /* same as background */
-    border: 1px solid #f5f5dc; /* cream border */
-    color: #f5f5dc; /* text color inside the box */
-    margin-left: 50px;
+    font-size: 1rem;
+    background-color: #6d7080;
+    border: 1px solid #f5f5dc;
+    color: #f5f5dc;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: block;
 }
 
+input[type="email"]::placeholder
+{
+    color: #f5f5dc;
+    opacity: 1;
+}
+
+/* GENERAL LINK STYLES */
 a
 {
-    color: #f5f5dc; /* cream color */
-    text-decoration: none; /* no underline by default */
+    color: #f5f5dc;
+    text-decoration: none;
     font-family: 'Almendra Display', cursive;
     font-weight: bold;
     letter-spacing: 1px;
@@ -133,13 +152,31 @@ a
 a:hover
 {
     text-decoration: underline;
-    color: #fff8dc; /* slightly brighter cream on hover */
+    color: #fff8dc;
 }
 
-
-/* Make the placeholder text cream too */
-input[type="email"]::placeholder
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px)
 {
-    color: #f5f5dc;
-    opacity: 1; /* make sure it’s full opacity, not faded */
+    nav
+    {
+        justify-content: center;
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .overlay h3
+    {
+        font-size: 1.25rem;
+    }
+
+    .overlay p
+    {
+        font-size: 0.9rem;
+    }
+
+    footer
+    {
+        font-size: 0.9rem;
+    }
 }

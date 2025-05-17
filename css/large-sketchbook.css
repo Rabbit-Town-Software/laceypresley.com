@@ -1,6 +1,6 @@
 body
 {
-    background-color: #6d7080 ; /* slightly darker purple */
+    background-color: #6d7080;
     color: #f5f5dc;
     font-family: 'Almendra Display', cursive;
     text-align: center;
@@ -8,14 +8,18 @@ body
     padding: 0;
 }
 
+/* NAVIGATION */
 nav
 {
-    margin-top: 30px;
-    margin-bottom: 100px;
-    font-size: 32px;
+    margin: 30px 0 100px;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-right: 1200px
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a
@@ -29,68 +33,76 @@ nav a:hover
     text-decoration: none;
 }
 
+/* HEADER */
 main h2
 {
-    font-size: 32px;
+    font-size: 2rem;
     word-spacing: 6px;
+    margin-bottom: 30px;
 }
 
-.normal
-{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 30px; /* space between the images */
-    flex-wrap: wrap; /* allow stacking on small screens */
-    margin: 40px 0;
-}
-
-.normal img
-{
-    width: 1000px;
-    height: auto;
-}
-
+/* IMAGE GROUPS */
+.normal,
 .row-1
 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 30px; /* space between the images */
-    flex-wrap: wrap; /* allow stacking on small screens */
+    gap: 30px;
+    flex-wrap: wrap;
     margin: 40px 0;
+}
+
+.normal img
+{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
 }
 
 .row-1-image img
 {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
 }
 
-
+/* FOOTER */
 footer
 {
     margin-top: 50px;
     margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 1rem;
+    padding: 0 1rem;
 }
 
+/* EMAIL INPUT */
 input[type="email"]
 {
-    padding: 5px;
+    padding: 10px;
     font-family: 'Almendra Display', cursive;
-    font-size: 16px;
-    background-color: #6d7080 ; /* same as background */
-    border: 1px solid #f5f5dc; /* cream border */
-    color: #f5f5dc; /* text color inside the box */
-    margin-left: 50px;
+    font-size: 1rem;
+    background-color: #6d7080;
+    border: 1px solid #f5f5dc;
+    color: #f5f5dc;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: block;
 }
 
+input[type="email"]::placeholder
+{
+    color: #f5f5dc;
+    opacity: 1;
+}
+
+/* LINKS */
 a
 {
-    color: #f5f5dc; /* cream color */
-    text-decoration: none; /* no underline by default */
+    color: #f5f5dc;
+    text-decoration: none;
     font-family: 'Almendra Display', cursive;
     font-weight: bold;
     letter-spacing: 1px;
@@ -100,13 +112,27 @@ a
 a:hover
 {
     text-decoration: underline;
-    color: #fff8dc; /* slightly brighter cream on hover */
+    color: #fff8dc;
 }
 
-
-/* Make the placeholder text cream too */
-input[type="email"]::placeholder
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px)
 {
-    color: #f5f5dc;
-    opacity: 1; /* make sure it’s full opacity, not faded */
+    nav
+    {
+        justify-content: center;
+        font-size: 1.5rem;
+        padding-left: 0;
+    }
+
+    .normal img,
+    .row-1-image img
+    {
+        max-width: 90%;
+    }
+
+    footer
+    {
+        font-size: 0.9rem;
+    }
 }

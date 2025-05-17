@@ -10,14 +10,18 @@ body
     padding: 0;
 }
 
+/* NAVIGATION */
 nav
 {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    font-size: 32px;
+    margin: 30px 0 40px;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-right: 1200px
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a
@@ -32,13 +36,14 @@ nav a:hover
     text-decoration: none;
 }
 
+/* FISH ROW SECTION */
 .fish-row
 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 30px; /* space between the images */
-    flex-wrap: wrap; /* allow stacking on small screens */
+    gap: 30px;
+    flex-wrap: wrap;
     margin: 40px 0;
 }
 
@@ -50,43 +55,55 @@ nav a:hover
     align-items: center;
 }
 
-.light-fish img
-{
-    width: 400px;
-    height: auto;
-}
-
+/* FISH IMAGES */
+.light-fish img,
 .dark-fish img
 {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
 .small-fish img
 {
-    width: 400px;
-    height: 291px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: auto 400 / 291; /* keep natural ratio */
 }
 
+/* FOOTER */
 footer
 {
     margin-top: 50px;
     margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 1rem;
+    padding: 0 1rem;
 }
 
+/* EMAIL INPUT */
 input[type="email"]
 {
-    padding: 5px;
+    padding: 10px;
     font-family: 'Almendra Display', cursive;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: #6d7080;
     border: 1px solid #f5f5dc;
     color: #f5f5dc;
-    margin-left: 50px;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: block;
 }
 
+input[type="email"]::placeholder
+{
+    color: #f5f5dc;
+    opacity: 1;
+}
+
+/* LINKS */
 a
 {
     color: #f5f5dc;
@@ -103,8 +120,36 @@ a:hover
     color: #fff8dc;
 }
 
-input[type="email"]::placeholder
+/* RESPONSIVE LAYOUT */
+@media (max-width: 768px)
 {
-    color: #f5f5dc;
-    opacity: 1;
+    nav
+    {
+        justify-content: center;
+        font-size: 1.5rem;
+        padding-left: 0;
+    }
+
+    .fish-row
+    {
+        gap: 20px;
+        margin: 30px 0;
+    }
+
+    .fish-row > div
+    {
+        width: 100%;
+    }
+
+    .light-fish img,
+    .dark-fish img,
+    .small-fish img
+    {
+        max-width: 90%;
+    }
+
+    footer
+    {
+        font-size: 0.9rem;
+    }
 }

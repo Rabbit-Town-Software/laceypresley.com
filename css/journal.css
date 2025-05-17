@@ -10,21 +10,24 @@ body
     padding: 0;
 }
 
+/* NAVIGATION */
 nav
 {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    font-size: 32px;
+    margin: 30px 0 40px;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-right: 1200px
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a
 {
     color: #f5f5dc;
     text-decoration: none;
-    margin: 0;
 }
 
 nav a:hover
@@ -32,56 +35,75 @@ nav a:hover
     text-decoration: none;
 }
 
+/* MAIN IMAGES */
 main img
 {
     margin-top: 20px;
-    max-width: 80%;
+    max-width: 90%;
+    height: auto;
     box-shadow: none;
 }
 
+/* HEADINGS */
 main h2
 {
-    font-size: 50px;
+    font-size: 3rem;
+    margin: 40px 0 20px;
 }
 
 main h3
 {
-    margin-left: 250px;
-    margin-right: 250px;
-    font-size: 20px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    max-width: 80%;
+    line-height: 1.4;
 }
 
+/* UNORDERED LIST */
 main ul
 {
     list-style: none;
-    font-size: 20px;
-    margin-top: 100px;
-    margin-bottom: 125px;
+    font-size: 1.25rem;
+    margin: 100px auto 125px;
+    padding: 0;
 }
+
 main li
 {
     padding: 10px;
 }
 
+/* FOOTER */
 footer
 {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 16px;
+    margin: 50px 0 30px;
+    font-size: 1rem;
+    padding: 0 1rem;
 }
 
+/* EMAIL INPUT */
 input[type="email"]
 {
-    padding: 5px;
+    padding: 10px;
     font-family: 'Almendra Display', cursive;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: #6d7080;
     border: 1px solid #f5f5dc;
     color: #f5f5dc;
-    margin-left: 50px;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto 0;
+    display: block;
 }
 
+input[type="email"]::placeholder
+{
+    color: #f5f5dc;
+    opacity: 1;
+}
+
+/* LINKS */
 a
 {
     color: #f5f5dc;
@@ -98,8 +120,35 @@ a:hover
     color: #fff8dc;
 }
 
-input[type="email"]::placeholder
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px)
 {
-    color: #f5f5dc;
-    opacity: 1;
+    nav
+    {
+        justify-content: center;
+        font-size: 1.5rem;
+        padding-left: 0;
+    }
+
+    main h2
+    {
+        font-size: 2.2rem;
+    }
+
+    main h3
+    {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    main ul
+    {
+        font-size: 1rem;
+        margin: 60px auto 100px;
+    }
+
+    footer
+    {
+        font-size: 0.9rem;
+    }
 }

@@ -1,6 +1,7 @@
+/* Base Styles */
 body
 {
-    background-color: #6d7080 ; /* slightly darker purple */
+    background-color: #6d7080;
     color: #f5f5dc;
     font-family: 'Almendra Display', cursive;
     text-align: center;
@@ -10,18 +11,21 @@ body
 
 nav
 {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    font-size: 28px;
+    margin: 30px 0 40px;
+    font-size: 1.75rem;
     font-weight: bold;
     letter-spacing: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav a
 {
     color: #f5f5dc;
     text-decoration: none;
-    margin: 0 100px;
+    padding: 0 15px;
 }
 
 nav a:hover
@@ -32,34 +36,36 @@ nav a:hover
 main img
 {
     margin-top: 20px;
-    max-width: 80%;
-    /* border: 2px solid #8a2be2;  <-- REMOVE the border */
-    box-shadow: none; /* make sure no shadow either */
+    max-width: 90%;
+    height: auto;
+    box-shadow: none;
 }
 
 footer
 {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 16px;
+    margin: 50px 0 30px;
+    font-size: 1rem;
+    padding: 0 1rem;
 }
 
 input[type="email"]
 {
-    padding: 5px;
+    padding: 10px;
     font-family: 'Almendra Display', cursive;
-    font-size: 16px;
-    background-color: #6d7080 ; /* same as background */
-    border: 1px solid #f5f5dc; /* cream border */
-    color: #f5f5dc; /* text color inside the box */
-    margin-left: 50px;
+    font-size: 1rem;
+    background-color: #6d7080;
+    border: 1px solid #f5f5dc;
+    color: #f5f5dc;
     text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 15px;
 }
 
 a
 {
-    color: #f5f5dc; /* cream color */
-    text-decoration: none; /* no underline by default */
+    color: #f5f5dc;
+    text-decoration: none;
     font-family: 'Almendra Display', cursive;
     font-weight: bold;
     letter-spacing: 1px;
@@ -69,13 +75,32 @@ a
 a:hover
 {
     text-decoration: underline;
-    color: #fff8dc; /* slightly brighter cream on hover */
+    color: #fff8dc;
 }
 
-
-/* Make the placeholder text cream too */
+/* Placeholder color fix */
 input[type="email"]::placeholder
 {
     color: #f5f5dc;
-    opacity: 1; /* make sure it’s full opacity, not faded */
+    opacity: 1;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px)
+{
+    nav
+    {
+        font-size: 1.2rem;
+        gap: 20px;
+    }
+
+    nav a
+    {
+        padding: 0 10px;
+    }
+
+    footer
+    {
+        font-size: 0.9rem;
+    }
 }
