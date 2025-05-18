@@ -4,7 +4,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
   <img src="https://img.shields.io/badge/Hosted%20on-Netlify-blue?logo=netlify">
-  <img src="https://img.shields.io/badge/Built%20with-HTML%20%26%20CSS-orange">
   <img src="https://img.shields.io/github/last-commit/rabbit-town-software/laceypresley.com">
   <img src="https://img.shields.io/github/languages/code-size/rabbit-town-software/laceypresley.com">
 </p>
