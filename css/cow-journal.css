@@ -55,9 +55,10 @@ main h2
 {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    gap: 30px; /* space between the images */
-    flex-wrap: wrap; /* allow stacking on small screens */
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column; /* stack items vertically */
+    gap: 40px;
     margin: 40px 0;
 }
 
